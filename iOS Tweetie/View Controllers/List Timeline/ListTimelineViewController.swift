@@ -55,7 +55,6 @@ class ListTimelineViewController: UIViewController {
     super.viewDidLoad()
     tableView.estimatedRowHeight = 90
     tableView.rowHeight = UITableView.automaticDimension
-
     bindUI()
   }
 

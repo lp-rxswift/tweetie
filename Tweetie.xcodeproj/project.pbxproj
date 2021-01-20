@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		758DE58325B888F600EA213E /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DE57C25B8889D00EA213E /* Secret.swift */; };
+		758DE58725B8894100EA213E /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DE57C25B8889D00EA213E /* Secret.swift */; };
+		758DE58B25B8894200EA213E /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758DE57C25B8889D00EA213E /* Secret.swift */; };
 		9622312EF59176939B330E51 /* Pods_TweetieAbstract_Tweetie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A918F106C2FD0EA1FAC32891 /* Pods_TweetieAbstract_Tweetie.framework */; };
 		9C07B8051DECC926005301ED /* TimelineFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C07B8041DECC926005301ED /* TimelineFetcher.swift */; };
 		9C07B8081DED7C16005301ED /* Reachability+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C07B8071DED7C16005301ED /* Reachability+.swift */; };
@@ -104,6 +107,7 @@
 		4CCDF22BA562342898610D75 /* Pods-TweetieAbstract-MacTweetie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-MacTweetie.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-MacTweetie/Pods-TweetieAbstract-MacTweetie.debug.xcconfig"; sourceTree = "<group>"; };
 		709769F53F81559A6E8E34F4 /* Pods-TweetieAbstract-TweetieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetieAbstract-TweetieTests.debug.xcconfig"; path = "Target Support Files/Pods-TweetieAbstract-TweetieTests/Pods-TweetieAbstract-TweetieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		758DE55725B639CB00EA213E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		758DE57C25B8889D00EA213E /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		9C07B8041DECC926005301ED /* TimelineFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineFetcher.swift; sourceTree = "<group>"; };
 		9C07B8071DED7C16005301ED /* Reachability+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reachability+.swift"; sourceTree = "<group>"; };
 		9C1EEAD11DF424B5009705BD /* TweetieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TweetieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +241,7 @@
 		9C2F4C611DE9C8A300307687 = {
 			isa = PBXGroup;
 			children = (
+				758DE57C25B8889D00EA213E /* Secret.swift */,
 				758DE55725B639CB00EA213E /* .gitignore */,
 				C6558A7821B1643800F2E197 /* APICache */,
 				9C67A1171DF31A2B00A3D8E9 /* Common Classes */,
@@ -859,6 +864,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8552FF1DF56C0D001C5226 /* TestData.swift in Sources */,
+				758DE58B25B8894200EA213E /* Secret.swift in Sources */,
 				9C8553021DF57945001C5226 /* ListTimelineViewModelTests.swift in Sources */,
 				9C8553061DF585F0001C5226 /* PersonTimelineViewModelTests.swift in Sources */,
 				9C1EEAE71DF4359D009705BD /* TwitterTestAPI.swift in Sources */,
@@ -885,6 +891,7 @@
 				9C4BBD031DEDFD5A008DEBF6 /* UserCellView.swift in Sources */,
 				9C8E0CF11DEC3014004A28CA /* TimelineCursor.swift in Sources */,
 				9C8E0D001DEC4A51004A28CA /* ListTimelineViewModel.swift in Sources */,
+				758DE58325B888F600EA213E /* Secret.swift in Sources */,
 				9C8E0CF31DEC3210004A28CA /* User.swift in Sources */,
 				9C2F4C701DE9C8A400307687 /* ListTimelineViewController.swift in Sources */,
 				9C07B8081DED7C16005301ED /* Reachability+.swift in Sources */,
@@ -914,6 +921,7 @@
 				9C67A1381DF3393F00A3D8E9 /* TweetCellView.swift in Sources */,
 				9C67A12B1DF3229C00A3D8E9 /* User.swift in Sources */,
 				9C67A1291DF3228E00A3D8E9 /* PersonTimelineViewModel.swift in Sources */,
+				758DE58725B8894100EA213E /* Secret.swift in Sources */,
 				9C67A1311DF3242E00A3D8E9 /* TableView+.swift in Sources */,
 				9C67A13A1DF339B000A3D8E9 /* ListTimelineViewController.swift in Sources */,
 				9C67A1261DF3227400A3D8E9 /* DateFormatter+Twitter.swift in Sources */,
