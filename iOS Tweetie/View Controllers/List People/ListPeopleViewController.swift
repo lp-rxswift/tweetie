@@ -26,6 +26,12 @@ class ListPeopleViewController: UIViewController {
   }
 
   func bindUI() {
+
+    viewModel.people.asDriver()
+      .map { [weak self] _ in self?.viewModel.people == nil ? true :  false }
+      .drive(onNext:{ [weak self] inNil in self?.messageView.isHidden = !inNil })
+      .disposed(by: bag)
+
     //show tweets in table view
     viewModel.people.asDriver()
       .drive(onNext: { [weak self] _ in self?.tableView.reloadData() })
