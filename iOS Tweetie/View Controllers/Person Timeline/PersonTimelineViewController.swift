@@ -40,6 +40,12 @@ class PersonTimelineViewController: UIViewController {
       .drive(rx.title)
       .disposed(by: bag)
     //bind the tweets to the table view
+
+    let dataSource = createTweetsDataSource()
+    viewModel.tweets
+      .map { return [TweetSection(model: "Tweets", items: $0)] }
+      .drive(tableView.rx.items(dataSource: dataSource))
+      .disposed(by: bag)
     
   }
 
