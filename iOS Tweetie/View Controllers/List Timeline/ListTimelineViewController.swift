@@ -55,12 +55,23 @@ class ListTimelineViewController: UIViewController {
     super.viewDidLoad()
     tableView.estimatedRowHeight = 90
     tableView.rowHeight = UITableView.automaticDimension
+    title = "@\(viewModel.list.username)/\(viewModel.list.slug)"
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks,
+                                                        target: nil,
+                                                        action: nil)
     bindUI()
   }
 
   func bindUI() {
     // Bind button to the people view controller
-
+    navigationItem.rightBarButtonItem!.rx.tap
+      .throttle(.milliseconds(500),scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        guard let self = self else { return }
+        self.navigator.show(segue: .listPeople(self.viewModel.account,
+                                               self.viewModel.list), sender: self)
+      })
+      .disposed(by: bag)
     // Show tweets in table view
 
 
