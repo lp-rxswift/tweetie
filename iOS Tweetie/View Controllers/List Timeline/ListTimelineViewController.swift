@@ -34,6 +34,7 @@ import UIKit
 import RxSwift
 import Then
 import Alamofire
+import RxRealmDataSources
 
 class ListTimelineViewController: UIViewController {
 
@@ -73,8 +74,19 @@ class ListTimelineViewController: UIViewController {
       })
       .disposed(by: bag)
     // Show tweets in table view
+    let dataSource = RxTableViewRealmDataSource<Tweet>(
+      cellIdentifier: "TweetCellView",
+      cellType: TweetCellView.self){ cell, _, tweet in
+      cell.update(with: tweet)
+    }
 
+    viewModel.tweets
+      .bind(to: tableView.rx.realmChanges(dataSource))
+      .disposed(by: bag)
 
     // Show message when no account available
+    viewModel.loggedIn
+      .drive(messageView.rx.isHidden)
+      .disposed(by: bag)
   }
 }
